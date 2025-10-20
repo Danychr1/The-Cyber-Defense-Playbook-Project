@@ -1,0 +1,31 @@
+# 🧩 The Cyber Defense Playbook Project
+
+
+I’ve always believed that the best way to learn something is to “build it, break it, and fix it yourself.” That’s what this project is about.
+
+Over the next few weeks, I’ll publish a series of multiple short, hands-on articles that connect cybersecurity theory to practice. Each one will explore a key topic from TCP/IP and network mapping to SIEM analysis, threat detection, and incident response, paired with a small project that shows how these skills work in action.
+
+## Why This Project
+My background is in Quality Assurance and Cloud, where I learned to build reliable systems through testing and automation. But over time, I realized that reliability means nothing without security. That insight pushed me to explore what happens when systems are targeted, how analysts see the invisible, find evidence of compromise, and act fast under pressure.
+This project is my way of combining what I already know with what I’m learning now, turning curiosity into capability, one topic at a time.
+
+## The Compromise Lens
+Every part of this project is viewed through what I call the Lens of Compromise, learning by looking at systems after they’ve been breached. Instead of starting with a clean theory, I start with a problem: a suspicious file, a strange network connection, or an unusual spike in logs. Then I work backward to uncover what happened.
+It’s not just about using tools, it’s about thinking like an investigator.
+
+## The Lego Analogy
+I see SOC work like building with Legos. Each skill, such as TCP/IP, SIEM queries, packet capture analysis, or scripting, is one block. Alone, it’s simple. Together, these pieces form the architecture of cyber defense. Each article will focus on adding one of these “Lego blocks” to my foundation, showing how small, well-understood parts connect into a complete security picture.
+
+## “Don’t Panic” The SOC Mindset
+Cybersecurity can feel overwhelming. Alerts pile up, dashboards light up, and attackers move fast. But great analysts share one thing: they don’t panic.
+That’s the mindset I want to develop here: calm under pressure, clear in thought, and methodical in response. Like in tactical or flight training, repetition builds instinct. By drilling these skills through projects and analysis, I aim to turn complexity into confidence.
+
+## What’s Next: TCP/IP Fundamentals
+Every investigation starts with one truth: everything happens over the network.
+— So my first topic will focus on TCP/IP Fundamentals, the foundation of digital communication.
+I’ll explore how packets move, how attackers exploit normal traffic, and how tools like Wireshark or Zeek reveal what’s really happening behind the scenes. And yes, there will be a small, real-world project to bring those concepts to life.
+
+## Closing Thought
+The Cyber Defense Playbook Project isn’t about perfection; it’s about progress. It’s about building skill by skill, block by block, until analysis becomes instinct and defense feels natural. If you’re curious about SOC work or building your own cybersecurity foundation, follow along.
+The journey starts with understanding one packet, one log, one story at a time.
+
