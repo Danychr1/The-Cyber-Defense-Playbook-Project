@@ -20,5 +20,5 @@ Before we begin analysis, we need to understand a critical issue. Let's check ou
      capinfos magnitude_1hr.pcap
 ```
 
-Result: The file shows Number of packets: 0 and File size: 24 bytes (just the PCAP header).
-This means the file is empty! All the existing PCAP files in this directory contain no packet data.
+"@Result": The file shows Number of packets: 0 and File size: 24 bytes (just the PCAP header).
+"@This means the file is empty!" All the existing PCAP files in this directory contain no packet data.
