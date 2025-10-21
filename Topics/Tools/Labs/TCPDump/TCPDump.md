@@ -135,8 +135,9 @@ For a complete view, add the -X flag:
 ```bash
 bashtcpdump -n -r magnitude_live.pcap host 172.16.89.2 -AX | less
 ```
-This shows:
+<img width="778" height="601" alt="Screenshot 2025-10-21 at 1 53 16 AM" src="https://github.com/user-attachments/assets/d1f52684-aa24-4a32-86c1-f41e97d8990d" />
 
+This shows:
 - Hex dump on the left
 - ASCII interpretation on the right
 - Perfect for analyzing binary protocols or encoded data
@@ -162,6 +163,8 @@ View traffic to/from an entire subnet:
 ```bash
 bashtcpdump -n -r magnitude_live.pcap net 172.16.89.0/24
 ```
+<img width="818" height="627" alt="Screenshot 2025-10-21 at 1 58 23 AM" src="https://github.com/user-attachments/assets/439faecd-8025-4f93-908e-ae862c86bd39" />
+
 Why this matters:
 
 - Detect lateral movement across multiple hosts
@@ -181,3 +184,14 @@ tcpdump -n -r magnitude_live.pcap tcp
 # UDP only
 tcpdump -n -r magnitude_live.pcap udp
 ```
+## Lab Checklist
+
+ * Created live capture with traffic to 172.16.89.2
+ * Filtered by host
+ * Filtered by host + port
+ * Viewed ASCII payload (-A)
+ * Viewed hex dump (-X)
+ * Filtered by protocol (ICMP, TCP, UDP)
+ * Filtered by network range
+
+   Happy hunting! 🔍
