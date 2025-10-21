@@ -1,5 +1,4 @@
-# 🔒 [Project Title]  
-**Example:** The Cyber Defense Playbook: Network Intrusion Analysis  
+# 🔒 [The Cyber Defense Playbook: Network Intrusion Analysis  ]  
 
 ---
 
