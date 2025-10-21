@@ -105,3 +105,69 @@ tcpdump -n -r magnitude_live.pcap host 172.16.89.2 and port 53
 tcpdump -n -r magnitude_live.pcap host 172.16.89.2 and port 3389
 ```
 
+### Filter 3: View Packet Payload (ASCII)
+
+See the actual content of packets with the -A flag:
+
+```bash
+bashtcpdump -n -r magnitude_live.pcap host 172.16.89.2 and port 445 -A
+```
+This displays:
+
+- All metadata (as before)
+- ASCII-decoded packet payload
+- Useful for reading HTTP requests, DNS queries, plaintext protocols
+
+### Filter 4: View Packet Payload (Hex + ASCII)
+
+For a complete view, add the -X flag:
+
+```bash
+bashtcpdump -n -r magnitude_live.pcap host 172.16.89.2 -AX | less
+```
+This shows:
+
+- Hex dump on the left
+- ASCII interpretation on the right
+- Perfect for analyzing binary protocols or encoded data
+
+### Filter 5: ICMP Traffic Only (Ping)
+
+Since we generated lots of ping traffic:
+
+```bash
+bashtcpdump -n -r magnitude_live.pcap icmp
+```
+
+This isolates ping requests and replies, useful for:
+
+- Network connectivity testing
+- Detecting ICMP tunneling
+- Identifying host discovery scans
+
+Filter 6: Network Range
+
+View traffic to/from an entire subnet:
+
+```bash
+bashtcpdump -n -r magnitude_live.pcap net 172.16.89.0/24
+```
+Why this matters:
+
+- Detect lateral movement across multiple hosts
+- Identify command & control (C2) servers using multiple IPs
+- Spot network scanning activity
+
+Filter 7: Protocol-Specific
+
+View specific protocols:
+```bash
+# IPv6 traffic
+tcpdump -n -r magnitude_live.pcap ip6
+
+# TCP only
+tcpdump -n -r magnitude_live.pcap tcp
+
+# UDP only
+tcpdump -n -r magnitude_live.pcap udp
+```
