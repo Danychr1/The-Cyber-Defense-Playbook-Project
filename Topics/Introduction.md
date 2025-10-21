@@ -13,4 +13,8 @@ While plans can be useless once an incident unfolds, the planning process itself
 - The course promotes dealing with complexity through "Legos of functionality," where core skills are seen as building blocks to tackle any attack scenario. 
 - These "Legos" include crisis management, network threat hunting, memory analysis, endpoint analysis, UEBA, log review, and endpoint protection analysis.
 
+  Here is a flowchart illustrating the "Legos of Functionality" concept for incident response:
+  <img width="1193" height="747" alt="Screenshot 2025-10-20 at 8 45 57 PM" src="https://github.com/user-attachments/assets/599149cf-de0a-4043-84f9-07eb9f66df53" />
+
+
 Here you can read an article that we write our project https://medium.com/@christel093/the-big-beautiful-soc-project-building-the-foundations-of-cyber-defense-c04d0624208f 
