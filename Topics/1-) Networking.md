@@ -5,14 +5,15 @@ Packets are discrete, smaller chunks of a large data stream, each containing hea
 ## IP Header
 - The IP header contains routing information for a packet to reach its destination.
 - Key components include:
-      - Version: Typically IPv4 or IPv6 s .
-      - Source and Destination IP Address: Unique 32-bit numbers identifying the communicating systems, analogous to a computer's phone number.
-      - Time to Live (TTL): Limits the number of hops a packet can take.
-      - Protocol: Indicates the next-level protocol (e.g., TCP or UDP).
-      - Checksum: Ensures packet integrity.
-      - Identification, IP Flags, Fragmentation Offset: Used for packet fragmentation, a less common process now due to modern router capabilities.
+   - Version: Typically IPv4 or IPv6.
+   - Source and Destination IP Address: Unique 32-bit numbers identifying the communicating systems, analogous to a computer's phone number.
+   - Time to Live (TTL): Limits the number of hops a packet can take.
+   - Protocol: Indicates the next-level protocol (e.g., TCP or UDP).
+   - Checksum: Ensures packet integrity.
+   - Identification, IP Flags, Fragmentation Offset: Used for packet fragmentation, a less common process now due to modern router capabilities.
           - The "evil bit" (an April 1st RFC) was a reserved bit humorously proposed to mark malicious packets.
-      - Request for Comments (RFCs) are documents that describe how internet technologies and networking protocols are supposed to work, followed by operating systems.
+- Request for Comments (RFCs) are documents that describe how internet technologies and networking protocols are supposed to work, followed by operating systems.
+
 ## TCP Header
  - The TCP header provides more detailed communication information, layered beneath the IP header.
  - Key components include:
