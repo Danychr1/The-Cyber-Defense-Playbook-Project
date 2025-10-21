@@ -23,6 +23,9 @@ capinfos magnitude_1hr.pcap
 - Result: The file shows Number of packets: 0 and File size: 24 bytes (just the PCAP header).
 - This means the file is empty! All the existing PCAP files in this directory contain no packet data.
 
+<img width="783" height="600" alt="Screenshot 2025-10-21 at 1 02 05 AM" src="https://github.com/user-attachments/assets/5d5eb923-5880-4b0d-81ed-d37b3477b3b0" />
+
+
 ## Creating a Live Capture
 Since we don't have pre-existing data, we'll capture live traffic for analysis. Based on our network reconnaissance, we know that 172.16.89.2 is an active host on our network (responds to ping, TTL=128 indicates Windows).
 
