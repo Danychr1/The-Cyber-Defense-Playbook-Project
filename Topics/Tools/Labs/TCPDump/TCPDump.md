@@ -79,6 +79,8 @@ Now that we have actual packet data, let's analyze it!
 ```bash
 tcpdump -n -r magnitude_live.pcap host 172.16.89.2
 ```
+<img width="788" height="596" alt="Screenshot 2025-10-21 at 1 16 31 AM" src="https://github.com/user-attachments/assets/1d6fef70-facf-45c3-877d-4dfd3b678ee7" />
+
 
 ### What this shows:
 
