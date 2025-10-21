@@ -53,6 +53,9 @@ nmap -p 80,443,445,3389,22 172.16.89.2
 smbclient -L //172.16.89.2 -N 2>/dev/null
 
 ```
+<img width="1520" height="841" alt="Screenshot 2025-10-21 at 1 10 14 AM" src="https://github.com/user-attachments/assets/e9585ad9-c8f3-48ed-93f9-548558d1e2cf" />
+
+
 ## Step 3: Stop the Capture
 
 Go back to Terminal 1 and press Ctrl+C to stop the capture.
@@ -63,6 +66,8 @@ Verify you captured data:
 capinfos magnitude_live.pcap
 ls -lh magnitude_live.pcap
 ```
+<img width="785" height="595" alt="Screenshot 2025-10-21 at 1 12 40 AM" src="https://github.com/user-attachments/assets/6eac764e-4e71-4cd3-81b2-2473124ffbfa" />
+
 
 You should see the packet count is greater than 0 and file size is larger than 24 bytes.
 
