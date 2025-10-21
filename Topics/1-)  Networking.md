@@ -35,3 +35,18 @@ Packets are discrete, smaller chunks of a large data stream, each containing hea
  - UDP (User Datagram Protocol) is a "fire and forget" protocol, meaning it sends data as quickly as possible without reliability checks like sequence numbers or acknowledgments.
  - It is suitable for streaming services (e.g., music, video) where dropping a few packets doesn't significantly degrade quality.
  - It contains a source port, destination port, length, and checksum 
+
+Here is a Venn diagram comparing TCP and UDP:
+<img width="1528" height="1334" alt="TCP vs  UDP" src="https://github.com/user-attachments/assets/5218e678-900d-44f4-810b-24d7f5ec3015" />
+
+Important Ports
+- Common ports include:
+   * 80 (HTTP): Web traffic.
+   * 443 (HTTPS): Encrypted web traffic.
+   * 22 (SSH): Secure Shell.
+   * 23 (Telnet): Unencrypted remote access.
+   * 3389 (RDP): Remote Desktop Protocol for Windows systems.
+   * 445 (SMB): Windows file sharing.
+   * 21 (FTP): File Transfer Protocol.
+   * 25 (SMTP): Email.
+- Shodan is a search engine for internet-connected devices, showing ports accessible from the open internet, often highlighting misconfigurations or exposed services like printers (JetDirect on port 515), databases (MongoDB), or SCADA systems
