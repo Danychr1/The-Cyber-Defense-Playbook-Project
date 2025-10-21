@@ -1,31 +1,16 @@
-# 🧩 The Cyber Defense Playbook Project
+# SOC Core Skills 
+## Course Background and Objectives
+- The SOC Core Skills course evolved from an "Intro to Security" class, which itself grew out of a "deception class" taught at Wild West Hackingfest
+- The course was created to address the need for foundational security skills, as many existing courses assumed prior knowledge of Linux, command-line interfaces, and packet captures
+- It aims to establish core skills in Windows, Windows command line, TCP/IP, packet analysis, Wireshark, and network threat hunting, providing a foundation for other Anti-Siphon courses.
+- All Anti-Siphon instructors are former SANS instructors, seniors, and fellows, offering high-quality training through a "pay-what-you-can" model to give back to the community.
+## Pedagogical Approach and Incident Response Mindset
+- The course emphasizes a "don't panic" approach to incident handling, drawing an analogy to military weapons training where skills are drilled repeatedly in worst-case scenarios until they become second nature.
+- This repetitive drilling of fundamental skills helps analysts relax during incidents and prevents paralysis.
+- The entire course is taught through the "lens of compromise," focusing on how to find malware and analyze network traffic after a system has been popped, rather than dry theoretical instruction.
+- This approach also builds a foundation for incident response classes.
+While plans can be useless once an incident unfolds, the planning process itself is indispensable.
+- The course promotes dealing with complexity through "Legos of functionality," where core skills are seen as building blocks to tackle any attack scenario. 
+- These "Legos" include crisis management, network threat hunting, memory analysis, endpoint analysis, UEBA, log review, and endpoint protection analysis.
 
-
-I’ve always believed that the best way to learn something is to “build it, break it, and fix it yourself.” That’s what this project is about.
-
-Over the next few weeks, I’ll publish a series of multiple short, hands-on articles that connect cybersecurity theory to practice. Each one will explore a key topic from TCP/IP and network mapping to SIEM analysis, threat detection, and incident response, paired with a small project that shows how these skills work in action.
-
-## Why This Project
-My background is in Quality Assurance and Cloud, where I learned to build reliable systems through testing and automation. But over time, I realized that reliability means nothing without security. That insight pushed me to explore what happens when systems are targeted, how analysts see the invisible, find evidence of compromise, and act fast under pressure.
-This project is my way of combining what I already know with what I’m learning now, turning curiosity into capability, one topic at a time.
-
-## The Compromise Lens
-Every part of this project is viewed through what I call the Lens of Compromise, learning by looking at systems after they’ve been breached. Instead of starting with a clean theory, I start with a problem: a suspicious file, a strange network connection, or an unusual spike in logs. Then I work backward to uncover what happened.
-It’s not just about using tools, it’s about thinking like an investigator.
-
-## The Lego Analogy
-I see SOC work like building with Legos. Each skill, such as TCP/IP, SIEM queries, packet capture analysis, or scripting, is one block. Alone, it’s simple. Together, these pieces form the architecture of cyber defense. Each article will focus on adding one of these “Lego blocks” to my foundation, showing how small, well-understood parts connect into a complete security picture.
-
-## “Don’t Panic” The SOC Mindset
-Cybersecurity can feel overwhelming. Alerts pile up, dashboards light up, and attackers move fast. But great analysts share one thing: they don’t panic.
-That’s the mindset I want to develop here: calm under pressure, clear in thought, and methodical in response. Like in tactical or flight training, repetition builds instinct. By drilling these skills through projects and analysis, I aim to turn complexity into confidence.
-
-## What’s Next: TCP/IP Fundamentals
-Every investigation starts with one truth: everything happens over the network.
-— So my first topic will focus on TCP/IP Fundamentals, the foundation of digital communication.
-I’ll explore how packets move, how attackers exploit normal traffic, and how tools like Wireshark or Zeek reveal what’s really happening behind the scenes. And yes, there will be a small, real-world project to bring those concepts to life.
-
-## Closing Thought
-The Cyber Defense Playbook Project isn’t about perfection; it’s about progress. It’s about building skill by skill, block by block, until analysis becomes instinct and defense feels natural. If you’re curious about SOC work or building your own cybersecurity foundation, follow along.
-The journey starts with understanding one packet, one log, one story at a time.
-
+Here you can read an article that we write our project https://medium.com/@christel093/the-big-beautiful-soc-project-building-the-foundations-of-cyber-defense-c04d0624208f 
