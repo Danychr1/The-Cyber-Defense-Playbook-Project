@@ -43,7 +43,7 @@ Captured Echo Request and Echo Reply packets.
 <img width="1285" height="601" alt="icmp (Ping Traffic) " src="https://github.com/user-attachments/assets/b7242020-0243-4207-ad8c-2e654cf49148" />
 
 
-2. DNS (Domain Name System Lookup)
+### 2. DNS (Domain Name System Lookup)
 Captured DNS query and response during nslookup.
 
 <img width="1218" height="745" alt="DNS (Domain Name System Lookup)" src="https://github.com/user-attachments/assets/338bcdb9-7022-4791-8a9c-ccf0beb7de77" />
