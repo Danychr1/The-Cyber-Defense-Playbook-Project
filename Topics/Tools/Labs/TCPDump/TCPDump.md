@@ -184,14 +184,18 @@ tcpdump -n -r magnitude_live.pcap tcp
 # UDP only
 tcpdump -n -r magnitude_live.pcap udp
 ```
+## Additional Resources
+Comprehensive TCPDump Guide:
+https://danielmiessler.com/study/tcpdump/
+
 ## Lab Checklist
 
- * Created live capture with traffic to 172.16.89.2
- * Filtered by host
- * Filtered by host + port
- * Viewed ASCII payload (-A)
- * Viewed hex dump (-X)
- * Filtered by protocol (ICMP, TCP, UDP)
- * Filtered by network range
+ ✅ Created live capture with traffic to 172.16.89.2
+ ✅ Filtered by host
+ ✅ Filtered by host + port
+ ✅ Viewed ASCII payload (-A)
+ ✅ Viewed hex dump (-X)
+ ✅ Filtered by protocol (ICMP, TCP, UDP)
+ ✅ Filtered by network range
 
-   ## Happy hunting! 🔍
+   ## 👨🏽‍💻 Happy hunting! 🔍
