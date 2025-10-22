@@ -34,3 +34,37 @@ Let's get started.
   - DNS — Captured via nslookup openai.com
   - TCP 3-Way Handshake — Captured via a fresh web connection
   - TCP Port 80 Traffic (HTTP-related) — Captured despite modern HTTPS enforcement
+
+## 📸 Screenshots
+
+### 1. ICMP (Ping Traffic)
+Captured Echo Request and Echo Reply packets.
+
+<img width="1285" height="601" alt="icmp (Ping Traffic) " src="https://github.com/user-attachments/assets/b7242020-0243-4207-ad8c-2e654cf49148" />
+
+
+2. DNS (Domain Name System Lookup)
+Captured DNS query and response during nslookup.
+
+<img width="1218" height="745" alt="DNS (Domain Name System Lookup)" src="https://github.com/user-attachments/assets/338bcdb9-7022-4791-8a9c-ccf0beb7de77" />
+
+
+### 3. TCP 3-Way Handshake
+Captured the SYN → SYN-ACK → ACK sequence during a connection setup.
+<img width="1284" height="751" alt="TCP 3-Way Handshake" src="https://github.com/user-attachments/assets/8d95cb69-44c2-4e03-9a8c-702450bdf299" />
+
+
+### 4. TCP Port 80 Traffic (HTTP Attempt)
+Captured TCP packets directed to Port 80 (HTTP protocol port), even though direct HTTP traffic was force-upgraded to HTTPS.
+
+<img width="1278" height="404" alt="TCP Port 80 Traffic (HTTP Attempt)" src="https://github.com/user-attachments/assets/2ce0f732-55c9-4274-897a-032b37c14f0b" />
+
+## 🧠 Skills Practiced
+ - Packet capturing and saving
+ - Applying Wireshark filters
+ - Analyzing ICMP, DNS, TCP handshakes, and HTTP-related traffic
+ - Documenting findings with screenshots
+ - Real-world troubleshooting with HTTPS-only environments
+
+## 🛡 Notes
+Due to modern network and browser security policies, direct HTTP traffic could not be captured as it was auto-upgraded to HTTPS. TCP Port 80 traffic was still captured and analyzed as part of the lab.
