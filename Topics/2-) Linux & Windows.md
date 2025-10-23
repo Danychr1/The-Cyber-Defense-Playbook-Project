@@ -332,28 +332,6 @@ If you see this, something's wrong.
 
 ## 🎓 Part 9: Level Up Your Skills
 
-### Antisyphon Core Certification
-
-A "pay what you can" cert (minimum $5) that's actually rigorous:
-- Multiple-choice exam
-- Cyber range challenges
-- Two written reports (prove you can communicate, not just hack)
-
-**Why it matters**: Employers judge it. It's not just a checkbox.
-
-### Recommended Resources
-
-**Metasploit**: Check out Metasploit Mega Primer and Offensive Security guides.
-
-**Note**: Professional red teamers use Cobalt Strike, Brute Ratel, and Sliver—not Metasploit. But Metasploit is perfect for learning.
-
-**Antisyphon Course Catalog**: $1,500/year for 50+ on-demand classes.
-
-**Must-take classes:**
-- **Initial Access Operations** (Michael Allen) - Bypassing endpoint security
-- **Implant Creation** (Jaw Fire) - Evading Windows Defender
-- **Enterprise Log Analysis** - UEBA and Deep Blue CLI
-
 ### Tools Worth Knowing
 
 **Deep Blue CLI**: Eric Conrad's triage tool for analyzing Windows logs.
