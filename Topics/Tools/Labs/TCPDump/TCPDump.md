@@ -205,6 +205,6 @@ https://danielmiessler.com/study/tcpdump/
   ✅ Filtered by network range
 
 ## Continuing the Lab?
-[Next Lab https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/blob/main/Topics/Tools/Labs/Wireshark/Wireshark.md]  
+[Next Lab (https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/blob/main/Topics/Tools/Labs/Wireshark/Wireshark.md)]  
 
    ## 👨🏽‍💻 Happy hunting! 🔍
