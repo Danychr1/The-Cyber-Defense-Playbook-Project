@@ -69,10 +69,10 @@ Captured TCP packets directed to Port 80 (HTTP protocol port), even though direc
 ## 🛡 Notes
 Due to modern network and browser security policies, direct HTTP traffic could not be captured as it was auto-upgraded to HTTPS. TCP Port 80 traffic was still captured and analyzed as part of the lab.
 
-## Continuing the course?
+## Continuing the Labs?
 Next Lab
 
-## Want to go back?
+## Want to go back to the previous Lab?
 
 - [Previous Lab](https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/blob/main/Topics/Tools/Labs/TCPDump/TCPDump.md)
 
