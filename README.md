@@ -84,6 +84,6 @@ Include screenshots here (e.g., Wireshark filters, Splunk dashboards, Zeek logs)
 ## 💬 Author  
 **Dany Christel**  
 SOC Analyst | DevOps | Cloud Enthusiast  
-[GitHub](https://github.com/Danychr1) • [LinkedIn](https://linkedin.com/in/danychristel) • [Medium](https://medium.com/@christel093)
+[GitHub](https://github.com/Danychr1) • [LinkedIn](https://www.linkedin.com/in/dany-christel-qa/) • [Medium](https://medium.com/@christel093)
 
 
