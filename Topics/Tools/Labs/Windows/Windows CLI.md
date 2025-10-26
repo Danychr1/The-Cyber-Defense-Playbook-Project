@@ -8,10 +8,8 @@ In this hands-on lab, we'll create and execute malware in a controlled environme
 Begin by elevating your privileges to root access:
 
 ```powershell
-# Legacy WMIC wrapper
-.\get-commandline.ps1 -PID 1234
-
-
+wmic process where processid=[PID] get commandline
+```
 
 Launch the Metasploit Framework console:
 
