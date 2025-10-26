@@ -7,12 +7,14 @@ In this hands-on lab, we'll create and execute malware in a controlled environme
 ### Initial Setup
 Begin by elevating your privileges to root access:
 
-``` 
-sudo su -
+```powershell
+# Legacy WMIC wrapper
+.\get-commandline.ps1 -PID 1234
 
-```
+
 
 Launch the Metasploit Framework console:
+
 ``` 
 bash
 
