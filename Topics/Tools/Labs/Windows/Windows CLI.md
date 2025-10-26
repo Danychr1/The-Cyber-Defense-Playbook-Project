@@ -86,6 +86,8 @@ For additional context about connection endpoints, use:
 ``` powershell
 netstat -f
 ```
+<img width="788" height="127" alt="Screenshot 2025-10-26 at 3 19 40 AM" src="https://github.com/user-attachments/assets/db4f8149-d38c-4eff-97f9-d1a3cfa4dcb3" />
+
 This displays fully qualified domain names (FQDNs), helping you identify legitimate connections you can filter out during analysis.
 
 ## Process Investigation
