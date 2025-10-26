@@ -8,8 +8,7 @@ In this hands-on lab, we'll create and execute malware in a controlled environme
 Begin by elevating your privileges to root access:
 
 ``` 
-bash
-
+'bash'
 sudo su -
 ```
 
