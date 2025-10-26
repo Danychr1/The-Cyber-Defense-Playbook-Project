@@ -7,9 +7,13 @@ In this hands-on lab, we'll create and execute malware in a controlled environme
 ### Initial Setup
 Begin by elevating your privileges to root access:
 
+<details>
+<summary>Click to expand setup commands</summary>
 ```bash
-./setup.sh
+sudo su -
 ```
+
+</details>
 
 Launch the Metasploit Framework console:
 
