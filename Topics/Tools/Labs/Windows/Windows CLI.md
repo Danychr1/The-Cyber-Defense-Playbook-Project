@@ -79,14 +79,21 @@ This command produces extensive output showing:
 * Listening ports (0.0.0.0:portnumber or LISTENING status)
 * Active connections to remote systems (ESTABLISHED status)
 
-Focus on the ESTABLISHED connections, particularly the connection using port 4444—this is the port configured for our malware payload.
+Focus on the ESTABLISHED connections, and the port configured for our malware payload.
 
 For additional context about connection endpoints, use:
 
-``` powershell
+``` powershelll# Find all PowerShell processes
 netstat -f
 ```
 <img width="788" height="127" alt="Screenshot 2025-10-26 at 3 19 40 AM" src="https://github.com/user-attachments/assets/db4f8149-d38c-4eff-97f9-d1a3cfa4dcb3" />
+
+Find PowerShell Process (Running or Not)
+``` powershell# Find all PowerShell processes
+Get-Process | Where-Object {$_.ProcessName -like "*powershell*"}
+```
+<img width="813" height="99" alt="Screenshot 2025-10-26 at 9 19 25 AM" src="https://github.com/user-attachments/assets/74bf3178-bd5e-4530-967a-44521e3420e4" />
+
 
 This displays fully qualified domain names (FQDNs), helping you identify legitimate connections you can filter out during analysis.
 
@@ -100,7 +107,7 @@ tasklist /m /fi "pid eq [PID]"
 
 ## Process Investigation
 
-From your earlier netstat -naob output, locate the Process ID (PID) associated with port 4444 and the powershell.exe process.
+From your earlier netstat -naob output, locate the Process ID (PID) and the powershell.exe process.
 The output will show loaded DLLs, though in this case, you won't find much suspicious activity at this level.
 
 Dig deeper using Windows Management Instrumentation Command-line (WMIC):
