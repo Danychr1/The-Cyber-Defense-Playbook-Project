@@ -90,6 +90,14 @@ netstat -f
 
 This displays fully qualified domain names (FQDNs), helping you identify legitimate connections you can filter out during analysis.
 
+We will start with tasklist:
+
+``` powershell
+tasklist /m /fi "pid eq [PID]"
+```
+<img width="828" height="86" alt="Screenshot 2025-10-26 at 8 56 14 AM" src="https://github.com/user-attachments/assets/4f5bc259-ddb6-4573-b6c9-03d297607f40" />
+
+
 ## Process Investigation
 
 From your earlier netstat -naob output, locate the Process ID (PID) associated with port 4444 and the powershell.exe process.
@@ -99,6 +107,8 @@ Dig deeper using Windows Management Instrumentation Command-line (WMIC):
 ``` powershell
 wmic process where processid=[PID] get commandline
 ```
+<img width="821" height="82" alt="Screenshot 2025-10-26 at 9 02 28 AM" src="https://github.com/user-attachments/assets/b44dbfff-2711-4312-9ca5-9b799efd6f8a" />
+
 
 This reveals that the malicious file was launched directly from the command line without any parameters—a significant indicator of suspicious activity.
 
@@ -106,6 +116,7 @@ Identify the parent process that spawned your malware:
 ``` powershell
 wmic process get name,parentprocessid,processid | select-string [PID]
 ```
+<img width="814" height="134" alt="Screenshot 2025-10-26 at 9 05 09 AM" src="https://github.com/user-attachments/assets/8d860dbb-f60a-4b75-88f3-8f6ae4c06d87" />
 
 ## Investigation Summary
 Through this systematic investigation, you've completed the following detection steps:
