@@ -97,15 +97,15 @@ wmic process get name,parentprocessid,processid | select-string [PID]
 ## Investigation Summary
 Through this systematic investigation, you've completed the following detection steps:
 
-1 - Identified the malicious network connection (port 4444)
+✅ Identified the malicious network connection (port 4444)
 
-2 - Located the associated process ID
+✅ Located the associated process ID
 
-3 - Examined the process command line
+✅ Examined the process command line
 
-4 - Traced back to the parent process ID
+✅ Traced back to the parent process ID
 
-5 - Discovered the malware was launched via cmd.exe
+✅ Discovered the malware was launched via cmd.exe
 
 Note: Your search may return additional processes launched by the command line interpreter, this is normal and reflects typical system activity.
 
