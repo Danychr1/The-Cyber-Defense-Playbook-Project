@@ -82,7 +82,7 @@ locate filename
 Need to find a file fast? `locate` searches a pre-built database. Just remember to update it first:
 
 ```bash
-sudo updatedb
+sudo update db
 ```
 
 ### Text Editors: Your Notepad
@@ -158,7 +158,7 @@ Here's where it gets spicy. You'll use **three terminals**:
 #### The Secret Pipe Trick
 
 ```bash
-mkfifo backpipe
+mkfifo back pipe
 ```
 
 This creates a FIFO (First-In, First-Out) pipe—a virtual tunnel between processes. Think of it like a pneumatic tube at a bank drive-through.
@@ -290,7 +290,7 @@ wmic process where processid=1234 get parentprocessid,processid,name
 wmic process where processid=1234 get commandline
 ```
 
-**The parent-child trick**: If `cmd.exe` spawned `powershell.exe` which spawned `suspicious.exe`, you can trace the infection chain backward.
+**The parent-child trick**: If `cmd.exe` spawned `powershell.exe` whitch spawned `suspicious.exe`, you can trace the infection chain backward.
 
 **Command line forensics**: See exactly how the malware was launched—often revealing hardcoded IPs or passwords.
 
