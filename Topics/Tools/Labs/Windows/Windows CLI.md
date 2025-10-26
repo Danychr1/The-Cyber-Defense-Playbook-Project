@@ -7,9 +7,10 @@ In this hands-on lab, we'll create and execute malware in a controlled environme
 ### Initial Setup
 Begin by elevating your privileges to root access:
 
-```powershell
-wmic process where processid=[PID] get commandline
-```
+#!/bin/bash
+
+# Elevate to root
+sudo su -
 
 Launch the Metasploit Framework console:
 
