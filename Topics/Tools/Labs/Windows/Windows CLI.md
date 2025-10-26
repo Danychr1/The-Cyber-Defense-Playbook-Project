@@ -6,7 +6,8 @@ In this hands-on lab, we'll create and execute malware in a controlled environme
 
 Before we proceed, we must ensure that Windows Defender is disabled. To do this, open Windows PowerShell. 
 
-<img width="793" height="116" alt="Screenshot 2025-10-26 at 2 57 51 AM" src="https://github.com/user-attachments/assets/06f4bd50-ef6b-42ee-ac5e-7fbc1cf679b9" />
+<img width="779" height="355" alt="Screenshot 2025-10-26 at 2 53 26 AM" src="https://github.com/user-attachments/assets/36975b00-3743-4b24-b326-1442c649f4db" />
+
 
 ### Initial Setup
 Begin by elevating your privileges to root access:
