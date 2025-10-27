@@ -147,5 +147,5 @@ This methodology demonstrates the fundamental process of threat hunting: startin
 - [Next Lab]()
 
 #### Want to go back to the previous Lab?
-- [Previuos Lab](https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/blob/main/Topics/Tools/Labs/Linux/Linux%20CLI.md)
+- [Previous Lab](https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/blob/main/Topics/Tools/Labs/Linux/Linux%20CLI.md)
 
