@@ -184,11 +184,10 @@ tcpdump -n -r magnitude_live.pcap tcp
 # UDP only
 tcpdump -n -r magnitude_live.pcap udp
 ```
-## Additional Resources
-Comprehensive TCPDump Guide:
-https://danielmiessler.com/study/tcpdump/
+### Additional Resources
+Comprehensive TCPDump Guide:https://danielmiessler.com/study/tcpdump/
 
-## Lab Checklist
+### Lab Checklist
 
   ✅ Created live capture with traffic to 172.16.89.2
  
@@ -204,7 +203,7 @@ https://danielmiessler.com/study/tcpdump/
   
   ✅ Filtered by network range
 
-## Continuing the Lab?
+### Continuing the Lab?
 
 - [Next Lab](https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/blob/main/Topics/Tools/Labs/Wireshark/Wireshark.md)
 
