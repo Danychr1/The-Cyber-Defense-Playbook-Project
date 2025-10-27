@@ -112,7 +112,7 @@ Note: /proc is a virtual filesystem that exposes runtime process information. Yo
 <img width="984" height="253" alt="Terminal 3c" src="https://github.com/user-attachments/assets/4945f556-545b-4fb7-9c10-94c0cb3a8a53" />
 
 
-## Inspect in-memory binary strings
+### Inspect in-memory binary strings
 
 You can extract readable strings from the executable mapped for the process:
 
@@ -129,8 +129,13 @@ Press Enter to reveal more lines in less.
 <img width="982" height="560" alt="Terminal 3e" src="https://github.com/user-attachments/assets/da15f547-9bd8-4b24-a27f-8ea0eb807831" />
 
 
-## Quick reminders
+### Quick reminders
 
 * Replace IPs and PIDs with values from your environment.
 
 * Use Ctrl+C to stop listeners or sessions when finished.
+
+### Continuous with Labs? 
+- [Next Lab](https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/blob/main/Topics/Tools/Labs/Windows/Windows%20CLI.md)
+
+- [Prevoius Lab](https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/blob/main/Topics/Tools/Labs/Wireshark/Wireshark.md)
