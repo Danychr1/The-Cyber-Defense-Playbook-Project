@@ -8,11 +8,11 @@ This is what investigating a compromised system feels like. And lucky for you, t
 
 ---
 
-## 🐧 Part 1: Understanding Your Linux Crime Scene
+### 🐧 Part 1: Understanding Your Linux Crime Scene
 
 ### The Universal Translator: Why Bash Matters
 
-Think of Linux distributions (Ubuntu, Fedora, Kali, etc.) like different dialects of the same language. Some people say "soda," others say "pop," but everyone understands what you mean. **Bash** is that universal language—master it once, and you can speak to any Linux system fluently.
+Think of Linux distributions (Ubuntu, Fedora, Kali, etc.) like different dialects of the same language. Some people say "soda," others say "pop," but everyone understands what you mean. **Bash** is that universal language. Master it once, and you can speak to any Linux system fluently.
 
 It's like learning to drive stick shift: once you know it, you can drive any car.
 
@@ -31,7 +31,7 @@ Every Linux system is like a massive building, and each floor has a specific pur
 
 **🎛️ The Equipment Closet (/dev)** - This is weird but cool: Linux treats *everything* as a file. Your keyboard? File. Your hard drive? File. Even `/dev/urandom` (a random number generator)—also a file. 
 
-> **Pro tip**: Never run `cat /dev/urandom`. It's like opening a fire hose in your terminal—pure chaos.
+> **Pro tip**: Never run `cat /dev/urandom`. It's like opening a fire hose in your terminal, pure chaos.
 
 **⚙️ The Control Center (/etc)** - Every program's settings are stored here. Unlike Windows (where settings are scattered everywhere), Linux keeps it organized. Need to configure your network? It's in `/etc`. Email server? Also `/etc`. It's beautiful.
 
@@ -53,9 +53,9 @@ Every Linux system is like a massive building, and each floor has a specific pur
 
 ---
 
-## 🔍 Part 2: Your Detective Toolkit
+### 🔍 Part 2: Your Detective Toolkit
 
-### Becoming Root: The Master Key
+#### Becoming Root: The Master Key
 
 ```bash
 sudo su -
@@ -63,7 +63,7 @@ sudo su -
 
 This command is like picking up the building's master key. You become root—the all-powerful administrator. Use it wisely.
 
-### Finding Hidden Evidence
+#### Finding Hidden Evidence
 
 In Linux, files that start with a dot (`.`) are hidden—think `.ssh_config` or `.bash_history`. They're not malicious by default; they're just tucked away to keep things tidy.
 
@@ -85,7 +85,7 @@ Need to find a file fast? `locate` searches a pre-built database. Just remember 
 sudo update db
 ```
 
-### Text Editors: Your Notepad
+#### Text Editors: Your Notepad
 
 **vim** - The detective's choice. It's on every Linux system ever made. Commands are cryptic but powerful:
 - `A` = start editing
@@ -97,9 +97,9 @@ sudo update db
 
 ---
 
-## 🕵️ Part 3: Finding the Bad Guys
+### 🕵️ Part 3: Finding the Bad Guys
 
-### The "Ping, Port, Parse" Method
+#### The "Ping, Port, Parse" Method
 
 When troubleshooting connections, follow this ritual:
 
@@ -115,7 +115,7 @@ When troubleshooting connections, follow this ritual:
    
 3. **Parse**: Read the error messages. They're trying to tell you something!
 
-### The All-Seeing Eye: lsof
+#### The All-Seeing Eye: lsof
 
 `lsof` stands for "List Open Files," but remember: *everything in Linux is a file*. Network connections? Files. Running programs? Files. This makes `lsof` absurdly powerful.
 
@@ -127,7 +127,7 @@ lsof -p 1234   # Show everything process 1234 is touching
 
 This is your X-ray vision into the system.
 
-### Process Monitoring: Who's Doing What?
+#### Process Monitoring: Who's Doing What?
 
 ```bash
 ps aux         # Snapshot of all processes
@@ -136,7 +136,7 @@ top            # Live view (like Task Manager)
 
 Press `Q` to escape from `top`—otherwise you're stuck watching processes forever.
 
-### Network Detective Work
+#### Network Detective Work
 
 ```bash
 ip a           # Show network adapters and IP addresses
@@ -145,9 +145,9 @@ ping target    # "Hey, are you there?" (Packet Internet Groper)
 
 ---
 
-## 🚪 Part 4: The Backdoor Lab (Things Get Real)
+### 🚪 Part 4: The Backdoor Lab (Things Get Real)
 
-### Creating a Backdoor (For Educational Purposes!)
+#### Creating a Backdoor (For Educational Purposes!)
 
 Here's where it gets spicy. You'll use **three terminals**:
 
@@ -177,9 +177,9 @@ This command is both beautiful and terrifying:
 
 ---
 
-## 🔦 Part 5: Hunting the Backdoor
+### 🔦 Part 5: Hunting the Backdoor
 
-### Step 1: Find Suspicious Connections
+#### Step 1: Find Suspicious Connections
 
 ```bash
 lsof -i -P
@@ -190,7 +190,7 @@ Look for:
 - Connections to strange IP addresses
 - Services you don't recognize
 
-### Step 2: Investigate the Process
+#### Step 2: Investigate the Process
 
 Found something fishy? Get its Process ID (PID), then:
 
@@ -200,7 +200,7 @@ lsof -p [PID]
 
 This shows everything the process is touching—files, libraries, network connections. It's like pulling their phone records.
 
-### Step 3: Examine the Executable in Memory
+#### Step 3: Examine the Executable in Memory
 
 Here's the cool part: even if the attacker deleted their malware from disk, it still exists in memory while running.
 
@@ -211,7 +211,7 @@ strings exe | less
 
 This extracts human-readable text from the running program. You'll see error messages, capabilities, often even the program's name. It's like finding their ID card.
 
-### Step 4: Extract Deleted Files
+#### Step 4: Extract Deleted Files
 
 If the executable was deleted:
 
@@ -229,7 +229,7 @@ lsof +L1
 
 ---
 
-## 🪟 Part 6: Windows Forensics
+### 🪟 Part 6: Windows Forensics
 
 ### Network Connections First
 
@@ -241,7 +241,7 @@ net session   # Show inbound SMB connections
 net use       # Show outbound mounted shares
 ```
 
-### The Golden Command: netstat -naob
+#### The Golden Command: netstat -naob
 
 This is your Swiss Army knife:
 
@@ -265,9 +265,9 @@ This might reveal connections to `sketchy-ad-service.ru`—red flag!
 
 ---
 
-## 🧪 Part 7: Windows Process Investigation
+### 🧪 Part 7: Windows Process Investigation
 
-### Tasklist Evolution
+#### Tasklist Evolution
 
 Basic `tasklist` is useless for malware hunting. Level up:
 
@@ -280,7 +280,7 @@ tasklist /fi "PID eq 1234"  # Filter by Process ID
 
 **Why DLLs matter**: Malware often injects malicious DLLs into legitimate processes. If `svchost.exe` is connected to a Russian server, it might have a bad DLL hitchhiking inside.
 
-### WMIC: The Power Tool
+#### WMIC: The Power Tool
 
 WMIC (Windows Management Instrumentation Command) is like having admin console access:
 
@@ -290,15 +290,15 @@ wmic process where processid=1234 get parentprocessid,processid,name
 wmic process where processid=1234 get commandline
 ```
 
-**The parent-child trick**: If `cmd.exe` spawned `powershell.exe` whitch spawned `suspicious.exe`, you can trace the infection chain backward.
+**The parent-child trick**: If `cmd.exe` spawned `powershell.exe`, which spawned `suspicious.exe`, you can trace the infection chain backward.
 
 **Command line forensics**: See exactly how the malware was launched—often revealing hardcoded IPs or passwords.
 
 ---
 
-## 🎪 Part 8: Real-World Malware Example
+### 🎪 Part 8: Real World Malware Example
 
-### The Metasploit Demo
+#### The Metasploit Demo
 
 The lab uses **psexec** (a legitimate Windows admin tool) weaponized for evil:
 
@@ -313,9 +313,9 @@ payload: windows/meterpreter/reverse_tcp
 3. Executes a service remotely
 4. Gives attacker a shell
 
-**Why it's sneaky**: It uses Windows' own tools. No malware file needed—just credentials.
+**Why it's sneaky**: It uses Windows' own tools. No malware file needed, just credentials.
 
-### PowerShell Obfuscation
+#### PowerShell Obfuscation
 
 Malware loves PowerShell because:
 - It's on every Windows machine
@@ -330,7 +330,7 @@ If you see this, something's wrong.
 
 ---
 
-## 🎓 Part 9: Level Up Your Skills
+### 🎓 Part 9: Level Up Your Skills
 
 ### Tools Worth Knowing
 
@@ -340,19 +340,19 @@ If you see this, something's wrong.
 
 ---
 
-## 💻 Bonus: Hardware Recommendations
+#### 💻 Bonus: Hardware Recommendations
 
 **Linux Desktops**: System76 (Pop!_OS) for desktop, but their laptops aren't travel-tough.
 
-**Laptops**: Lenovo ThinkPad running Fedora—built like a tank.
+**Laptops**: Lenovo ThinkPad running Fedora, built like a tank.
 
 **Password Cracking Rigs**: Dedicated GPU setups (Kraken, Cthulhu) for serious work.
 
 ---
 
-## 🎬 Final Thoughts
+#### 🎬 Final Thoughts
 
-You're no longer just running commands—you're investigating crime scenes, following digital breadcrumbs, and thinking like both the attacker and defender.
+You're no longer just running commands; you're investigating crime scenes, following digital breadcrumbs, and thinking like both the attacker and defender.
 
 **Remember**:
 - Start with network connections
@@ -367,3 +367,4 @@ Now go forth and hunt some backdoors. 🕵️‍♂️🔍
 
 *"In cyber defense, you're not just learning commands—you're learning to think like a detective in a digital world where the criminal could be anywhere, hiding in plain sight."*
 
+Please feel free to read a small article that we wrote about the topic
