@@ -367,4 +367,4 @@ Now go forth and hunt some backdoors. 🕵️‍♂️🔍
 
 *"In cyber defense, you're not just learning commands—you're learning to think like a detective in a digital world where the criminal could be anywhere, hiding in plain sight."*
 
-Please feel free to read a small article that we wrote about the topic
+- Please feel free to read a small article that we wrote about the topic
