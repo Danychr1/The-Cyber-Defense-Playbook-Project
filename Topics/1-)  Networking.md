@@ -39,7 +39,7 @@ Packets are discrete, smaller chunks of a large data stream, each containing hea
 Here is a Venn diagram comparing TCP and UDP:
 <img width="1528" height="1334" alt="TCP vs  UDP" src="https://github.com/user-attachments/assets/5218e678-900d-44f4-810b-24d7f5ec3015" />
 
-Important Ports
+### Important Ports
 - Common ports include:
    * 80 (HTTP): Web traffic.
    * 443 (HTTPS): Encrypted web traffic.
@@ -50,3 +50,5 @@ Important Ports
    * 21 (FTP): File Transfer Protocol.
    * 25 (SMTP): Email.
 - Shodan is a search engine for internet-connected devices, showing ports accessible from the open internet, often highlighting misconfigurations or exposed services like printers (JetDirect on port 515), databases (MongoDB), or SCADA systems
+
+* Feel free to check the [article](https://medium.com/@christel093/networking-fundamentals-understanding-the-tcp-ip-model-ee2c9a9c7134) that we wrote about the project. 
