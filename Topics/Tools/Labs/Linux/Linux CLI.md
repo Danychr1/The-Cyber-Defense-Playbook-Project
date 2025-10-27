@@ -138,4 +138,4 @@ Press Enter to reveal more lines in less.
 ### Continuous with Labs? 
 - [Next Lab](https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/blob/main/Topics/Tools/Labs/Windows/Windows%20CLI.md)
 
-- [Prevoius Lab](https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/blob/main/Topics/Tools/Labs/Wireshark/Wireshark.md)
+- [Previuos Lab](https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/blob/main/Topics/Tools/Labs/Wireshark/Wireshark.md)
