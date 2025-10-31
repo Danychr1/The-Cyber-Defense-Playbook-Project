@@ -342,9 +342,9 @@ If you see this, something's wrong.
 
 #### 💻 Bonus: Hardware Recommendations
 
-**Linux Desktops**: System76 (Pop!_OS) for desktop, but their laptops aren't travel-tough.
+**Linux Desktops**: System76 (Pop! OS) for desktop, but their laptops aren't travel-tough.
 
-**Laptops**: Lenovo ThinkPad running Fedora, built like a tank.
+**Laptops**: Lenovo ThinkPads running Fedora —built like tanks.
 
 **Password Cracking Rigs**: Dedicated GPU setups (Kraken, Cthulhu) for serious work.
 
@@ -361,10 +361,10 @@ You're no longer just running commands; you're investigating crime scenes, follo
 - DLLs can hide in legitimate processes
 - The command line never lies
 
-Now go forth and hunt some backdoors. 🕵️‍♂️🔍
+Now you can go forth and hunt some backdoors. 🕵️‍♂️🔍
 
 ---
 
-*"In cyber defense, you're not just learning commands—you're learning to think like a detective in a digital world where the criminal could be anywhere, hiding in plain sight."*
+*"In cyber defense, you're not just learning commands, you're learning to think like a detective in a digital world where the criminal could be anywhere, hiding in plain sight."*
 
 - Please feel free to read a small article that we wrote about the topic
