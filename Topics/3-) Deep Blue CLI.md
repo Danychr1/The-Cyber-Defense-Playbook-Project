@@ -1,3 +1,5 @@
+# Deep Blue CLI for Triage and Log Analysis
+
 * Deep Blue CLI is a tool that automates the process of analyzing event logs, serving as a user entity behavioral analytics (UEBA) tool for triage in potentially compromised environments.
 
 * It can be run against event logs from a domain controller or a suspected compromised system (with proper logging enabled, like command line, PowerShell, or Sysmon).
