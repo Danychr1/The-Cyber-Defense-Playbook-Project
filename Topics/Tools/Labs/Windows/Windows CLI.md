@@ -146,6 +146,5 @@ This methodology demonstrates the fundamental process of threat hunting: startin
 #### Continuous with Labs? 
 - [Next Lab](https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/blob/main/Topics/Tools/Labs/DeepBlueCLI/DeepBlueCLI.md)
 
-#### Want to go back to the previous Lab?
+#### Would you like to go back to the previous Lab?
 - [Previous Lab](https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/blob/main/Topics/Tools/Labs/Linux/Linux%20CLI.md)
-
