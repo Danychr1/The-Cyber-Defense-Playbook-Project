@@ -76,4 +76,4 @@ Check an example of obfuscation detection:
 
 ---
 
-DeepBlueCLI gives us quick, behavior-focused signals — new accounts, repeated failed logins, and encoded commands — so we can triage faster and dig deeper where it matters. Want a short lab file or expected output snapshots to go with these steps?
+DeepBlueCLI gives us quick, behavior-focused signals — new accounts, repeated failed logins, and encoded commands.  So we can triage faster and dig deeper where it matters. 
