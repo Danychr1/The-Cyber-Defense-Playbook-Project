@@ -11,10 +11,10 @@ Let’s get started by firing up a Kali Linux instance, and let’s begin.
 1. R-base-core (the statistical tool):
 This is the software that lets you do mathematical analysis. Install it on Kali with:
 
-'''bash 
+```bash 
 sudo apt update
 sudo apt install r-base-core
-''' 
+``` 
 
 
 #### Continuous with Labs? 
