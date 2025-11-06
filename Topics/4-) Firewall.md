@@ -13,5 +13,7 @@ Develop skills to analyze any log file, rather than relying on a SIM tool to par
     
 ### Process:
   1.) Clean and refine log data by filtering for interesting patterns and excluding irrelevant ones.
+  
   2.) Focus on specific column fields.
+  
   3.) Perform mathematical analysis on refined data (e.g., calculate minimum, maximum, mean, standard deviation, and variance). 
