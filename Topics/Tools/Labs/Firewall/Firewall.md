@@ -24,13 +24,19 @@ sudo apt install r-base-core
 Let's start investigating. We're going to search for activity from internal IP 192.168.1.6, but we want to exclude traffic to our edge router at 24.230.56.6—that's just routine noise:
 ```bash 
 bashgrep 192.168.1.6 ASA-syslogs.txt | grep -v 24.230.56.6 | less
-``` 
+```
+
+<img width="978" height="611" alt="First-Look" src="https://github.com/user-attachments/assets/15f2760f-fb29-40fa-81ff-4bbb40ea36d9" />
+
 Overwhelming, right? We're staring at a wall of text that would make anyone's eyes glaze over. Don't panic if you feel stuck in the terminal—just hit "q" to escape back to your command prompt.
+
 ### Cleaning Up The Mess
 Let's refine this chaos into something we can actually work with:
+
 ```bash
 grep 192.168.1.6 ASA-syslogs.txt | grep -v 24.230.56.6 | grep FIN | cut -d ' ' -f 1,3,4,5,7,8,9,10,11,12,13,14
 ```
+<img width="994" height="186" alt="Cleaning Up" src="https://github.com/user-attachments/assets/fe559f42-d379-4b6e-920a-78af465a58a4" />
 
 What we just did: We filtered for closed connections (FIN flag) and extracted only the specific fields we care about. The cut command with -d ' ' tells it to split on spaces, then we grab columns 1, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, and 14. Much cleaner output, right?
 
@@ -38,13 +44,20 @@ What we just did: We filtered for closed connections (FIN flag) and extracted on
 ### Finding The Pattern
 Look closely at your output. Notice something? We're seeing connections to two external addresses: 13.107.237.38 and 18.160.185.174. Let's investigate each one separately.
 First, let's isolate traffic to 13.107.237.38:
+
 ```bash
 grep 192.168.1.6 ASA-syslogs.txt | grep -v 24.230.56.6 | grep FIN | grep 13.107.237.38 | cut -d ' ' -f 1,3,4,5,7,8,9,10,11,12,13,14
 ```
+<img width="976" height="78" alt="Pattern" src="https://github.com/user-attachments/assets/d70d3301-9777-46fd-aa77-ee93703cff69" />
+
+
 Now let's check out connections to 18.160.185.174:
 ```bash
 grep 192.168.1.6 ASA-syslogs.txt | grep -v 24.230.56.6 | grep FIN | grep 18.160.185.174 | cut -d ' ' -f 1,3,4,5,7,8,9,10,11,12,13,14
 ```
+<img width="975" height="178" alt="Partern 1" src="https://github.com/user-attachments/assets/4d885b0c-d26e-43ae-abf8-679c328d560b" />
+
+
 ### The Moment Of Truth
 Take a hard look at that last field in your output. See anything repeating? Let's zoom in on just that column:
 ```bash
