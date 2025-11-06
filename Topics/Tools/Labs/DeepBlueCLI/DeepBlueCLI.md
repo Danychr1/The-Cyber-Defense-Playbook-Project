@@ -80,7 +80,7 @@ DeepBlueCLI gives us quick, behavior-focused signals — new accounts, repeated 
 
 
 #### Continuous with Labs? 
-- [Next Lab]()
+- [Next Lab](https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/blob/main/Topics/Tools/Labs/Firewall/Firewall.md)
 
 #### Would you like to go back to the previous Lab?
 - [Previous Lab](https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/blob/main/Topics/Tools/Labs/Windows/Windows%20CLI.md)
