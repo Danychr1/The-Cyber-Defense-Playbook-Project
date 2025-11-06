@@ -18,6 +18,7 @@ cd /opt/firewall_log
 sudo apt update
 sudo apt install r-base-core
 ```
+<img width="999" height="454" alt="Install " src="https://github.com/user-attachments/assets/47be6ae4-c3a0-4ba6-804b-d12f3eb764e8" />
 
 ### The First Look (Brace Yourself)
 Let's start investigating. We're going to search for activity from internal IP 192.168.1.6, but we want to exclude traffic to our edge router at 24.230.56.6—that's just routine noise:
