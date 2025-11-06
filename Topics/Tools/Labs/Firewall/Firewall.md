@@ -60,15 +60,22 @@ grep 192.168.1.6 ASA-syslogs.txt | grep -v 24.230.56.6 | grep FIN | grep 18.160.
 
 ### The Moment Of Truth
 Take a hard look at that last field in your output. See anything repeating? Let's zoom in on just that column:
+
 ```bash
 grep 192.168.1.6 ASA-syslogs.txt | grep -v 24.230.56.6 | grep FIN | grep 18.160.185.174 | cut -d ' ' -f 14
 ```
+<img width="973" height="201" alt="Moments" src="https://github.com/user-attachments/assets/8f59aa8b-7d7b-40e3-a827-573af7bc84e9" />
+
 We're seeing a pattern, aren't we? Consistent values appearing over and over. That's interesting—potentially very interesting.
+
 ### Let The Numbers Tell The Story
 Now we're going to run some statistical analysis on that field. This is where we separate the real analysts from the button-clickers:
 ``` bash
 grep 192.168.1.6 ASA-syslogs.txt | grep -v 24.230.56.6 | grep FIN | grep 18.160.185.174 | cut -d ' ' -f 8,14 | tr : ' ' | tr / ' ' | cut -d ' ' -f 4 | Rscript -e 'y <-scan("stdin", quiet=TRUE)' -e 'cat(min(y), max(y), mean(y), sd(y), var(y), sep="\n")'
-``` 
+```
+<img width="982" height="155" alt="Numbers" src="https://github.com/user-attachments/assets/4f13322e-d3ec-4bfe-a712-41faa85d6c24" />
+
+ 
 What just happened? We extracted specific fields, cleaned up the delimiters (those tr commands swap colons and slashes for spaces), then piped everything into R for statistical analysis. We're calculating:
 
   * Minimum value: The smallest data transfer size
