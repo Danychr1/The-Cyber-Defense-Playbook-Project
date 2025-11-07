@@ -95,7 +95,7 @@ We extracted specific fields, cleaned up the delimiters (those tr commands swap 
 The goal of this lab is to show us how we can use `grep` and `cut`, and also how we can use our tools to take that data, convert it into information, because right now we have very good information that we can turn into full-on knowledge.
 
 #### Continuous with Labs? 
-- [Next Lab]()
+- [Next Lab](https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/blob/main/Topics/Tools/Labs/Memory/MemoryAnalysis.md)
 
 #### Would you like to go back to the previous Lab?
 - [Previous Lab](https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/blob/main/Topics/Tools/Labs/DeepBlueCLI/DeepBlueCLI.md)
