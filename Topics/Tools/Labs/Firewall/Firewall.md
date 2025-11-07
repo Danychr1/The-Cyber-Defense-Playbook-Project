@@ -76,17 +76,24 @@ grep 192.168.1.6 ASA-syslogs.txt | grep -v 24.230.56.6 | grep FIN | grep 18.160.
 <img width="982" height="155" alt="Numbers" src="https://github.com/user-attachments/assets/4f13322e-d3ec-4bfe-a712-41faa85d6c24" />
 
  
-What just happened? We extracted specific fields, cleaned up the delimiters (those tr commands swap colons and slashes for spaces), then piped everything into R for statistical analysis. We're calculating:
+#### What just happened? 
 
-  * Minimum value: The smallest data transfer size
-  * Maximum value: The largest data transfer size
-  * Mean: The average
-  * Standard deviation: How much variation exists
-  * Variance: Another measure of spread
+We extracted specific fields, cleaned up the delimiters (those tr commands swap colons and slashes for spaces), then piped everything into R for statistical analysis. We're calculating:
 
+  ✅ Minimum value: The smallest data transfer size
+  ✅ Maximum value: The largest data transfer size
+  ✅ Mean: The average
+  ✅ Standard deviation: How much variation exists
+  ✅ Variance: Another measure of spread
+
+#### What is the goal? 
+
+The goal of this lab is to show us how we can use `grep` and `cut`, and also how we can use our tools to take that data, convert it into information, because right now we have very good information that we can turn into full-on knowledge.
 
 #### Continuous with Labs? 
 - [Next Lab]()
 
 #### Would you like to go back to the previous Lab?
 - [Previous Lab](https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/blob/main/Topics/Tools/Labs/DeepBlueCLI/DeepBlueCLI.md)
+
+Dany Christel 👨🏽‍💻👨🏽‍💻👨🏽‍💻
