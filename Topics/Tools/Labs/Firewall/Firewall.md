@@ -80,11 +80,15 @@ grep 192.168.1.6 ASA-syslogs.txt | grep -v 24.230.56.6 | grep FIN | grep 18.160.
 
 We extracted specific fields, cleaned up the delimiters (those tr commands swap colons and slashes for spaces), then piped everything into R for statistical analysis. We're calculating:
 
-  ✅ Minimum value: The smallest data transfer size
-  ✅ Maximum value: The largest data transfer size
-  ✅ Mean: The average
-  ✅ Standard deviation: How much variation exists
-  ✅ Variance: Another measure of spread
+  ✅ Minimum value: The smallest data transfer size.
+  
+  ✅ Maximum value: The largest data transfer size.
+  
+  ✅ Mean: The average.
+  
+  ✅ Standard deviation: How much variation exists.
+  
+  ✅ Variance: Another measure of spread.
 
 #### What is the goal? 
 
