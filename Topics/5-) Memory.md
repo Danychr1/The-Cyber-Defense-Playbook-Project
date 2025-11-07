@@ -4,6 +4,7 @@
   * Tool: Volatility is a leading memory analysis tool used for this purpose.
     
   * Methodology:
+    
       1- Create a memory snapshot of the virtual machine or cloud instance (e.g., in VMware).
     
       2- Analyze the memory dump file offline, ensuring the attacker remains unaware of the investigation.
