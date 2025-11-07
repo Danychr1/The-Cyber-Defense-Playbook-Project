@@ -5,7 +5,9 @@
     
   * Methodology:
       1- Create a memory snapshot of the virtual machine or cloud instance (e.g., in VMware).
+    
       2- Analyze the memory dump file offline, ensuring the attacker remains unaware of the investigation.
+    
       3- Volatility uses "symbol lookup tables" specific to the operating system version, service pack, and language pack to map memory locations.
 
 <img width="1086" height="674" alt="Volatility Memory Analysis Capabilities" src="https://github.com/user-attachments/assets/018fc589-0f21-44c7-9e1a-49491f98ef59" />
