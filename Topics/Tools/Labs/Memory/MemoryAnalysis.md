@@ -114,10 +114,14 @@ Run the command (using PID 5452 for TrustMe.exe):
   * Potential evidence of how it was executed (manually, script, scheduled task)
 
 ##### Tips for Success
-✅ Take notes as you run each command
-✅ Look for patterns across different analysis types
-✅ Cross-reference findings (match PIDs between commands)
-✅ Be patient - some commands take time on large memory dumps
+✅ Take notes as you run each command.
+
+✅ Look for patterns across different analysis types.
+
+✅ Cross-reference findings (match PIDs between commands).
+
+✅ Be patient - some commands take time on large memory dumps.
+
 ✅ Think like an attacker - what would they do next?
 
 #### Continuous with Labs? 
