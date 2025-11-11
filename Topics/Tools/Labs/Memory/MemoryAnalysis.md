@@ -95,7 +95,30 @@ Run the command:
 3. This command prompt likely executed malicious commands
 
 
+#### Task 5: Investigate Suspicious Process DLLs
+DLLs (Dynamic Link Libraries) loaded by a process can reveal its capabilities and behavior.
+Run the command (using PID 5452 for TrustMe.exe):
+  ```bash
+  python3 vol.py -f ./memdump.vmem windows.dlllist --pid 5452
+  ```
+##### What to look for:
 
+  * Unusual DLLs: Libraries related to networking, encryption, or system manipulation.
+  * DLL paths: Legitimate Windows DLLs load from System32; others may be suspicious
+  * Command-line arguments: Shows how the process was started and with what parameters
+
+##### The command-line information reveals:
+
+  * The full path where the executable was run from
+  * Any flags or arguments passed to the program
+  * Potential evidence of how it was executed (manually, script, scheduled task)
+
+##### Tips for Success
+✅ Take notes as you run each command
+✅ Look for patterns across different analysis types
+✅ Cross-reference findings (match PIDs between commands)
+✅ Be patient - some commands take time on large memory dumps
+✅ Think like an attacker - what would they do next?
 
 #### Continuous with Labs? 
 - [Next Lab]()
