@@ -17,7 +17,6 @@
 * Memory dump file (memdump.vmem)
 
 ## Lab Instructions
-
 #### Step 1: Open Terminal and Gain Root Access.
 
 - Open a terminal by clicking the terminal icon in the taskbar or searching for "Terminal" in the Kali menu.
@@ -26,9 +25,77 @@
   sudo su -
   ```
 #### Step 2: Navigate to Volatility Directory
-``` bash
+  ``` bash
 cd /opt/volatility3-1.0.0
-``` 
+  ``` 
+
+## Analysis Tasks
+#### Task 1: Find Suspicious Memory Pages
+  Memory pages with Read, Write, and Execute (RWX) permissions are suspicious because legitimate programs rarely need all three permissions simultaneously. Malware often uses RWX pages to inject and run code.
+  
+Run the command:
+  ``` bash
+  python3 vol.py -f ./memdump.vmem windows.malfind.Malfind
+  ```
+⏱️ Note: This command may take several minutes to complete.
+
+##### What to look for:
+* Processes with unusual names (e.g., "TrustMe.exe" - ironic name for malware!).
+* Executable code in unexpected memory regions.
+* Encoded or obfuscated code patterns.
+
+#### Task 2: Examine Network Connections.
+Network connections can reveal command-and-control (C2) communications and lateral movement attempts.
+Run the command:
+  ``` bash
+  python3 vol.py -f ./memdump.vmem windows.netscan
+  ```
+
+##### What to look for:
+  * Port 445 (SMB): Connections to internal systems may indicate lateral movement.
+  * Connections to external IPs on unusual ports.
+  * Multiple connections from the same suspicious process
+Why this matters: If a compromised system is connecting to other internal machines, the infection may be spreading across your network.
+
+#### Task 3: List Running Processes
+Run the command:
+  ``` bash
+  python3 vol.py -f ./memdump.vmem windows.pslist
+  ```
+
+##### What to look for:
+  * cmd.exe: Command prompt sessions are unusual for normal users
+  * Processes with suspicious names
+  * Multiple instances of the same process
+  * Processes running from unusual locations (e.g., temp folders, user directories)
+
+Key observation: The presence of cmd.exe without user interaction suggests automated or scripted activity, often a sign of malware.
+
+#### Task 4: View Process Tree
+The process tree shows parent-child relationships, helping you trace how malware was executed.
+Run the command:
+  ``` bash
+  python3 vol.py -f ./memdump.vmem windows.pstree
+  ```
+  **How to read the output:**
+  - **Indentation** shows parent-child relationships
+  - Follow the chain backward to find the initial infection vector
+
+  **Example analysis:**
+  ```
+  Explorer.exe (GUI/User interaction)
+    └── TrustMe.exe (Suspicious executable)
+        └── cmd.exe (Command shell spawned by malware)
+  ```
+
+##### What this tells us:
+
+1. User double-clicked TrustMe.exe from Windows Explorer
+2. TrustMe.exe spawned a command prompt
+3. This command prompt likely executed malicious commands
+
+
+
 
 #### Continuous with Labs? 
 - [Next Lab]()
