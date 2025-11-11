@@ -16,6 +16,11 @@
 * Volatility 3 (version 1.0.0) installed.
 * Memory dump file (memdump.vmem)
 
+## Lab Instructions
+
+`Step 1: Open Terminal and Gain Root Access` 
+- Open a terminal by clicking the terminal icon in the taskbar or searching for "Terminal" in the Kali menu.
+- Elevate to root privileges:
 
 #### Continuous with Labs? 
 - [Next Lab]()
