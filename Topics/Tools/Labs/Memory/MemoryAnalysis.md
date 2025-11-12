@@ -339,24 +339,77 @@ Save output:
    python3 vol.py -f /root/memory-forensics-lab/memdump.vmem windows.dlllist --pid 5452 > /root/memory-forensics-lab/05-dlllist.txt
 ```
 
-Task 7: Extract Command History
+#### Task 7: Extract Command History
 See what commands were executed:
 ```bash
    python3 vol.py -f /root/memory-forensics-lab/memdump.vmem windows.cmdline
 ```
 <img width="997" height="616" alt="Pictures 10" src="https://github.com/user-attachments/assets/0dc7e50a-db22-48d8-a946-a63e9c3acf43" />
 
-Task 8: Search for Suspicious Files
+#### Task 8: Search for Suspicious Files
 ```bash
    python3 vol.py -f /root/memory-forensics-lab/memdump.vmem windows.filescan | grep -i "trustme\|temp\|download"
 ```
 <img width="978" height="584" alt="Pictures 11" src="https://github.com/user-attachments/assets/00d4150c-0ecf-4a43-8338-74df4f015b75" />
 
-
 This helps locate:
     * Malware file paths
     * Dropped files
     * Staging directories
+
+#### Create Your Investigation Report
+Now compile everything into a report:
+```
+# Create report directory
+mkdir -p /root/memory-forensics-lab/report
+
+# Create a summary file
+cat > /root/memory-forensics-lab/report/investigation-summary.txt << 'EOF'
+MEMORY FORENSICS INVESTIGATION REPORT
+======================================
+
+1. SYSTEM INFORMATION
+   - OS Version: [From windows.info]
+   - Dump Time: [From windows.info]
+   - Architecture: [x86/x64]
+
+2. MALWARE IDENTIFIED
+   - File Name: TrustMe.exe (example)
+   - PID: 5452
+   - Parent Process: Explorer.exe (user execution)
+   - Location: C:\Users\Victim\Downloads\
+
+3. MALICIOUS ACTIVITY
+   - Spawned Processes: cmd.exe, powershell.exe
+   - Network Connections: SMB to 10.0.0.50:445
+   - DLLs Loaded: ws2_32.dll (networking)
+   - Command-line: TrustMe.exe -silent -connect 10.0.0.50
+
+4. INDICATORS OF COMPROMISE (IOCs)
+   - File Hash: [If available]
+   - Process Name: TrustMe.exe
+   - Network IOCs: 10.0.0.50:445
+   - Registry Keys: [If found]
+
+5. ATTACK TIMELINE
+   1. User downloaded/received TrustMe.exe
+   2. User executed from Explorer.exe
+   3. Malware spawned cmd.exe
+   4. Established SMB connection (lateral movement)
+   5. Potential data exfiltration or propagation
+
+6. RECOMMENDATIONS
+   - Isolate affected system
+   - Check 10.0.0.50 for compromise
+   - Block TrustMe.exe at endpoint protection
+   - Reset user credentials
+   - Review firewall logs for SMB traffic
+EOF
+
+# Edit with your findings
+nano /root/memory-forensics-lab/report/investigation-summary.txt
+```
+<img width="1069" height="637" alt="Pictures 12" src="https://github.com/user-attachments/assets/04a2a699-0739-4605-82b2-4a18b766af16" />
 
 ##### Tips for Success
 ✅ Take notes as you run each command.
