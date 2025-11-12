@@ -73,6 +73,8 @@ Required
      cd /opt
      git clone https://github.com/volatilityfoundation/volatility3.git
   ```
+<img width="1002" height="424" alt="Pictures 1" src="https://github.com/user-attachments/assets/3fa0d8cc-1df5-4365-9de7-689041ada593" />
+
 
 3.3 Navigate to Directory
   ```bash 
@@ -91,6 +93,8 @@ Required
      python3 vol.py -h
   ```
 Expected output: You should see Volatility 3 help menu with available commands.
+
+<img width="1006" height="667" alt="Pictures 2 " src="https://github.com/user-attachments/assets/2cb19aeb-7a0c-43a4-a805-39af0f5bb870" />
 
 3.6 Create Convenient Alias (Optional)
   ``` bash
@@ -146,6 +150,7 @@ Now you can use volatility3 instead of typing the full path
    # Copy file
    sudo cp /mnt/shared/MemLabs-Lab1.7z /root/memory-forensics-lab/
 ```
+<img width="993" height="656" alt="Pictures 3" src="https://github.com/user-attachments/assets/7567a597-042c-4f97-86fa-a0aec834cbc7" />
 
 Step 6: Extract Memory Dump
 6.1 Install Extraction Tools
@@ -187,6 +192,7 @@ Step 6: Extract Memory Dump
    cd /opt/volatility3
    python3 vol.py -f /root/memory-forensics-lab/memdump.vmem windows.info
 ``` 
+<img width="1003" height="553" alt="Pictures 4" src="https://github.com/user-attachments/assets/a22b1d29-2b2d-4392-b2ab-1ce366279d35" />
 
 What to document:
 
@@ -218,11 +224,15 @@ Save output:
 
 
 Example: PID 5452 = TrustMe.exe
+<img width="995" height="667" alt="Pictures 5" src="https://github.com/user-attachments/assets/e2f81f20-6d0a-4783-9113-c127d07cb469" />
 
 Save output:
 ```bash
    python3 vol.py -f /root/memory-forensics-lab/memdump.vmem windows.pslist > /root/memory-forensics-lab/02-pslist.txt
-``` 
+```
+
+
+
 #### Task 3: View Process Tree (Infection Chain)
 
 See parent-child relationships to trace how malware started:
@@ -236,7 +246,10 @@ Explorer.exe (PID: 1234)          ← User's desktop
   └── TrustMe.exe (PID: 5452)     ← User clicked this
       └── cmd.exe (PID: 6789)     ← Malware spawned command prompt
           └── powershell.exe      ← Running malicious commands
-          
+    
+<img width="995" height="340" alt="Pictures 6 " src="https://github.com/user-attachments/assets/a7858fc4-492c-400f-a154-942c15dd9236" />
+
+
 This tells you:
 
 1. Initial vector: User execution (Explorer.exe parent)
@@ -248,11 +261,18 @@ Save output:
 ```bash
    python3 vol.py -f /root/memory-forensics-lab/memdump.vmem windows.pstree > /root/memory-forensics-lab/03-pstree.txt
 ```
+<img width="976" height="89" alt="Pictures 7 " src="https://github.com/user-attachments/assets/4808a447-afc5-430e-8192-1c37ecea38ab" />
+
+
+
 #### Task 5: Examine Network Connections
 Identify C2 communications and lateral movement:
 ```bash
    python3 vol.py -f /root/memory-forensics-lab/memdump.vmem windows.netscan
 ```
+<img width="993" height="663" alt="Pictures 8" src="https://github.com/user-attachments/assets/fe14bdb8-23cc-44d3-b856-ccd0363ba553" />
+
+
 **What to look for:**
 
 | Port | Protocol | Suspicious If... |
@@ -275,7 +295,8 @@ What this means:
 Save output:
 ```bash
    python3 vol.py -f /root/memory-forensics-lab/memdump.vmem windows.netscan > /root/memory-forensics-lab/04-netscan.txt
-``` 
+```
+
 #### Task 6: Investigate Suspicious Process DLLs
 
 Pick a suspicious PID from Task 3 (e.g., 5452 for TrustMe.exe):
@@ -284,6 +305,9 @@ bash
 # Replace 5452 with YOUR suspicious PID
 python3 vol.py -f /root/memory-forensics-lab/memdump.vmem windows.dlllist --pid 5452
 ```
+
+<img width="990" height="602" alt="Pictures 9" src="https://github.com/user-attachments/assets/ee13d907-f8d7-41ca-9472-15079eb08ca2" />
+
 **What to look for:**
 
 **Networking capabilities:**
@@ -320,11 +344,15 @@ See what commands were executed:
 ```bash
    python3 vol.py -f /root/memory-forensics-lab/memdump.vmem windows.cmdline
 ```
+<img width="997" height="616" alt="Pictures 10" src="https://github.com/user-attachments/assets/0dc7e50a-db22-48d8-a946-a63e9c3acf43" />
 
 Task 8: Search for Suspicious Files
 ```bash
    python3 vol.py -f /root/memory-forensics-lab/memdump.vmem windows.filescan | grep -i "trustme\|temp\|download"
-``` 
+```
+<img width="978" height="584" alt="Pictures 11" src="https://github.com/user-attachments/assets/00d4150c-0ecf-4a43-8338-74df4f015b75" />
+
+
 This helps locate:
     * Malware file paths
     * Dropped files
