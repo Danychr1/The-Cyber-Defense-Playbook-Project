@@ -24,9 +24,13 @@ You're investigating a compromised Windows system. A memory dump was captured du
 
 ### Prerequisites
 Required
+
 ✅ Kali Linux (VM or physical)
+
 ✅ 2GB+ free disk space
+
 ✅ Internet connection
+
 ✅ Root/sudo access
 
 ### Optional but Helpful
