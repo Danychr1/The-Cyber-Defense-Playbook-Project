@@ -243,8 +243,11 @@ See parent-child relationships to trace how malware started:
 **How to read the tree:**
 ```
 Explorer.exe (PID: 1234)          ← User's desktop
+
   └── TrustMe.exe (PID: 5452)     ← User clicked this
+  
       └── cmd.exe (PID: 6789)     ← Malware spawned command prompt
+      
           └── powershell.exe      ← Running malicious commands
     
 <img width="995" height="340" alt="Pictures 6 " src="https://github.com/user-attachments/assets/a7858fc4-492c-400f-a154-942c15dd9236" />
