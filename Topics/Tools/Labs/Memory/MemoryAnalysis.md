@@ -36,8 +36,11 @@ Required
 ### Optional but Helpful
 
 📝 Note-taking application
+
 🖥️ Two monitors (one for instructions, one for terminal)
+
 📚 Basic Linux command-line knowledge
+
 ⏱️ Note: This command may take several minutes to complete.
 
 ## Lab Instructions
