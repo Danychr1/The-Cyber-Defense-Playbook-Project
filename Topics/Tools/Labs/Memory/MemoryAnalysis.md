@@ -208,7 +208,7 @@ Save output:
 
 #### Task 2: List All Running Processes
 
-* Purpose: Get overview of all processes at time of capture
+* Purpose: Get overview of all processes at the time of capture
   
 ```bash
    python3 vol.py -f /root/memory-forensics-lab/memdump.vmem windows.pslist
