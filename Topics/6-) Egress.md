@@ -1,7 +1,9 @@
 # Egress Traffic Analysis with Zeke and Rita/AC Hunter
 
 * Necessity: $Egress traffic analysis is critical for detecting command and control and exfiltration, especially as encryption (SSL/TLS) makes traditional signature-based detection difficult.$
+  
 * NetFlow: $A Cisco standard (version 9) for collecting network traffic statistics, useful for analysis engines like SIMs$
+  
 * Zeke (formerly Bro): $An industry-standard tool for network traffic analysis known for its speed, large user base, and consistency.$
     * It processes network packet captures or live streams and breaks the data into discrete log files (e.g., DNS, HTTP, FTP, connection logs, SSL/TLS certificate info, SMB, Kerberos).
 
