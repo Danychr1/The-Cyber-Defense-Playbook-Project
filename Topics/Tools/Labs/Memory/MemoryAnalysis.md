@@ -423,7 +423,7 @@ nano /root/memory-forensics-lab/report/investigation-summary.txt
 ✅ Think like an attacker - what would they do next?
 
 #### Continuous with Labs? 
-- [Next Lab]()
+- [Next Lab](https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/tree/main/Topics/Tools/Labs/Egress)
 
 #### Would you like to go back to the previous Lab?
 - [Previous Lab](https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/blob/main/Topics/Tools/Labs/Firewall/Firewall.md)
