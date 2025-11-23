@@ -10,9 +10,9 @@
 * Identifying suspicious processes and network connections.
 * Tracing parent-child process relationships.
 * Examining DLLs and command-line arguments.
-* Understand parent-child process relationships
-* Extract DLLs and command-line arguments
-* Create forensic investigation reports
+* Understand parent-child process relationships.
+* Extract DLLs and command-line arguments.
+* Create forensic investigation reports.
 
 ### Lab Scenario
 You're investigating a compromised Windows system. A memory dump was captured during the incident. Your job is to:
