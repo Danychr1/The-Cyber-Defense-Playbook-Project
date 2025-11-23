@@ -21,8 +21,7 @@
 * AC Hunter: A hosted version of Rita used for labs, allowing users to analyze specific datasets and answer questions about beaconing and fully qualified domain names (FQDNs).
    * Winlab agent example: Showed malware installed but not activated, with 15-second intervals and zero-byte payloads.
    * GCAT example: Malware using gmail.smtp.msa.l.google.com for command and control, exploiting firewalls that ignore Google traffic.
-   * DNSCAT example: Malware using DNS as a command and control channel, characterized by a very high FQDN count and lookups from a single system (e.g., 60,000+ FQDNs, 100,000+ total queries).
- 
+   * DNSCAT example: Malware using DNS as a command and control channel, characterized by a very high FQDN count and lookups from a single system (e.g., 60,000+ FQDNs, 100,000+ total queries). 
      
 * Full PCAP Analysis: Involves setting up capture devices pre-Network Address Translation (NAT) to ensure internal IP addresses are visible. Dedicated capture devices like Coralite and Gigamon are available.
 
