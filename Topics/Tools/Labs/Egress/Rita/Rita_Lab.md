@@ -2,8 +2,6 @@
 
 
 
-
-
 #### Continuous with Labs? 
 - [Next Lab](https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/tree/main/Topics/Tools/Labs/Egress/Zeke)
 
