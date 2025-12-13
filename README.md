@@ -69,7 +69,7 @@ Include screenshots here (e.g., Wireshark filters, Splunk dashboards, Zeek logs)
 
 | Evidence | Description |
 |-----------|-------------|
-| ![wireshark](images/wireshark_capture.png) | Suspicious HTTP request observed |
+| ![wireshark]([https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/blob/main/Topics/Tools/Labs/Wireshark/Wireshark.md]) | Suspicious HTTP request observed |
 | ![splunk](images/splunk_search.png) | Event correlation showing repeated beacon attempts |
 
 ---
