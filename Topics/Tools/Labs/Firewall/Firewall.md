@@ -100,4 +100,4 @@ The goal of this lab is to show us how we can use `grep` and `cut`, and also how
 #### Would you like to go back to the previous Lab?
 - [Previous Lab](https://github.com/Danychr1/The-Cyber-Defense-Playbook-Project/blob/main/Topics/Tools/Labs/DeepBlueCLI/DeepBlueCLI.md)
 
-Dany Christel 👨🏽‍💻👨🏽‍💻👨🏽‍💻
+Dany Christel 👨🏽‍💻👨🏽‍💻👨🏽‍💻. 
